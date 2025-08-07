@@ -1,7 +1,7 @@
 "use client";
 import { Typography } from "@material-tailwind/react";
 import { getImagePrefix } from "../../utils/utils";
-
+import Image from 'next/image';
 interface ProductCardProps {
   img: string;
   title: string;
@@ -36,11 +36,8 @@ function ProductCard({ img, title, desc }: ProductCardProps) {
   return (
     <div className="group flex flex-col gap-4 items-start rounded-xl bg-white p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-100">
       <div className="w-full h-48 overflow-hidden rounded-lg bg-gray-100">
-        <img
-          src={img}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
+       
+<Image src="/path/to/image.jpg" alt="..." width={500} height={300} />
       </div>
       <div className="flex flex-col gap-2 w-full">
         <Typography 
